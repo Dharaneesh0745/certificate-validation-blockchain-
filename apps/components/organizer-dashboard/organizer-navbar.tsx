@@ -6,8 +6,7 @@ import Image from "next/image";
 import { Moon, Sparkles, Sun } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-// import { MobileSidebar } from "@/components/mobile-sidebar";
-// import { ModeToggle } from "@/components/mode-toggle";
+import { MobileSidebar } from "@/components/organizer-dashboard/organizer-mobile-sidebar";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -19,32 +18,12 @@ import { useTheme } from "next-themes";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-import {
-  Cloud,
-  CreditCard,
-  Github,
-  Keyboard,
-  LifeBuoy,
-  LogOut,
-  Mail,
-  MessageSquare,
-  Plus,
-  PlusCircle,
-  Settings,
-  User,
-  UserPlus,
-  Users,
-} from "lucide-react";
+import { LifeBuoy, LogOut, Settings, User } from "lucide-react";
 
 import {
   DropdownMenuGroup,
   DropdownMenuLabel,
-  DropdownMenuPortal,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
 } from "@/components/ui/dropdown-menu";
 
 const font = Poppins({ weight: "600", subsets: ["latin"] });
@@ -55,6 +34,7 @@ export const Navbar = () => {
   return (
     <div className="fixed w-full z-50 flex justify-between items-center py-2 px-4 h-16 border-b border-primary/10 bg-secondary">
       <div className="flex items-center mb-4 md:mb-0 md:justify-start sm:justify-center">
+        <MobileSidebar isPro={true} />
         <Link href="/" className="flex items-center">
           <div className="relative h-8 w-8 mr-4">
             <Image fill alt="Logo" src="/logo.png" />

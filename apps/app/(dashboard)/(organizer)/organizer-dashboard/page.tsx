@@ -1,8 +1,7 @@
-import { Navbar } from "@/components/organizer-dashboard/organizer-navbar";
 import React from "react";
 
 const OrganizerDashboard = () => {
-  return <Navbar />;
+  return <div>hello</div>;
 };
 
 export default OrganizerDashboard;
