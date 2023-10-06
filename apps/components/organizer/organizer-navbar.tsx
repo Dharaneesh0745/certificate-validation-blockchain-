@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Moon, Sparkles, Sun } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import { MobileSidebar } from "@/components/organizer-dashboard/organizer-mobile-sidebar";
+import { MobileSidebar } from "@/components/organizer/organizer-mobile-sidebar";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -35,7 +35,7 @@ export const Navbar = () => {
     <div className="fixed w-full z-50 flex justify-between items-center py-2 px-4 h-16 border-b border-primary/10 bg-secondary">
       <div className="flex items-center mb-4 md:mb-0 md:justify-start sm:justify-center">
         <MobileSidebar isPro={true} />
-        <Link href="/" className="flex items-center">
+        <Link href="/organizer" className="flex items-center">
           <div className="relative h-8 w-8 mr-4">
             <Image fill alt="Logo" src="/logo.png" />
           </div>
@@ -94,7 +94,9 @@ export const Navbar = () => {
             <DropdownMenuGroup>
               <DropdownMenuItem>
                 <User className="mr-2 h-4 w-4" />
-                <span>Profile</span>
+                <Link href={"/organizer/profile"}>
+                  <span>Profile</span>
+                </Link>
               </DropdownMenuItem>
 
               <DropdownMenuItem>

@@ -12,21 +12,18 @@ export const Sidebar = () => {
   const routes = [
     {
       icon: Home,
-      href: "/",
+      href: "/organizer",
       label: "Home",
-      pro: false,
     },
     {
       icon: PlusSquare,
       href: "/",
       label: "Issue",
-      pro: true,
     },
     {
       icon: PenSquare,
       href: "/",
       label: "Generate",
-      pro: false,
     },
   ];
 
