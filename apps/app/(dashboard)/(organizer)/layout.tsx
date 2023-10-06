@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/organizer-dashboard/organizer-navbar";
-import { Sidebar } from "@/components/organizer-dashboard/organizer-sidebar";
+import { Navbar } from "@/components/organizer/organizer-navbar";
+import { Sidebar } from "@/components/organizer/organizer-sidebar";
 
 const RootLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
